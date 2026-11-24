@@ -1,0 +1,37 @@
+:root {
+  --bg: #fbfbf8;
+  --fg: #1c1c1a;
+  --dim: #6b6b64;
+  --link: #1a4fa3;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161614; --fg: #d8d8d0; --dim: #85857c; --link: #8ab4f8; }
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  font: 16px/1.6 ui-monospace, "SF Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  color: var(--fg);
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+nav { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin-bottom: 2rem; }
+nav .home { margin-right: auto; font-weight: bold; text-decoration: none; color: var(--fg); }
+h1, h2 { font-size: 1em; margin: 2rem 0 .5rem; }
+h1 { font-size: 1.25em; }
+pre.banner {
+  margin: 0 0 2rem; overflow-x: auto; line-height: 1.25; color: var(--fg);
+}
+.rule { color: var(--dim); overflow: hidden; white-space: nowrap; }
+.tags a { margin-right: .75rem; }
+ul.posts { list-style: none; padding: 0; margin: 1rem 0; }
+ul.posts li { display: flex; gap: 1.25ch; margin-bottom: .35rem; flex-wrap: wrap; }
+ul.posts time { color: var(--dim); white-space: nowrap; }
+.dim, footer { color: var(--dim); }
+footer { margin-top: 4rem; font-size: .875em; }
+article p { margin: 0 0 1.1rem; }
+article pre { overflow-x: auto; padding: .75rem; border: 1px solid var(--dim); }
